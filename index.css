@@ -8,6 +8,8 @@ body{
     width: fit-content;
     margin: auto;
     background-color: #121212;
+    border: 1px solid;
+    height: 100vh;
 }
 
 .header-container{
@@ -69,6 +71,13 @@ body{
     display: flex;
     justify-content: space-between;
 }
+.search-container i{
+    color: #9CA3AF;
+    width: 16px;
+    height: 16px;
+    margin: 9px 0px 9px 13px;
+    cursor: pointer;
+}
 .search-container input{
     background: transparent;
     border:none;
@@ -79,7 +88,7 @@ body{
     font-size: 14px;
     line-height: 20px;
     letter-spacing: 0%;
-    margin: 9px 212px 9px 41px;
+    margin: 9px 212px 9px 8px;
 }
 .search-container input:focus{
     outline: none;
@@ -104,4 +113,34 @@ body{
     line-height: 20px;
     letter-spacing: 0%;
     cursor: pointer;
+}
+
+.homepage-container{
+    display: block;
+    margin: auto;
+    position:relative;
+    top: 300px;
+    width: 148px;
+    height: 90px;
+    text-align: center;
+}
+.icon-placeholder{
+    color: #2E2E2F;
+    width: 80px;
+    height: 62px;
+    font-size: 6rem;
+}
+.title-placeholder{
+    color: #2E2E2F;
+    width: 148px;
+    height: 20px;
+    font-family: Inter;
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 18px;
+    leading-trim: NONE;
+    line-height: 20px;
+    letter-spacing: 0%;
+    text-align: center;
+    margin-top: 15px;
 }
