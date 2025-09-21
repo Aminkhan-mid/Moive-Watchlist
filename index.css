@@ -270,6 +270,9 @@ body{
         font-size: 0.69rem; /* smaller text */
         margin: 4px 0; /* tighter spacing */
     }
+    .moive-container .total-mins{
+        margin-left: 10px;
+    }
 
     .moive-container .moive-decs {
         width: auto; /* allow description to shrink */
