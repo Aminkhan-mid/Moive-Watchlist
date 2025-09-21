@@ -237,10 +237,7 @@ body{
     .search-container input{
         font-size: 0.9rem;
     }
-}
 
-
-@media (max-width: 480px) {
     .moive-container {
         margin: 20px 10px; /* reduce margins to fit screen */
         gap: 12px; /* optional spacing between poster and text */
