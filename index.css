@@ -274,7 +274,7 @@ body{
     .moive-container .genres,
     .moive-container button {
         font-size: 0.69rem; /* smaller text */
-        margin: 4px 0; /* tighter spacing */
+        margin: 4px 3px; /* tighter spacing */
     }
     .moive-container .total-mins{
         margin-left: 10px;
