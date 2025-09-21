@@ -111,32 +111,11 @@ body{
     min-width: 80px;
 }
 
-@media (max-width: 480px) {
-    .header-container h1{
-        left: 20px;
-    }
-    .header-container p{
-        top: 30px;
-    }
-    .search-container{
-        width: 95%;
-        height: 38px;
-    }
-    .search-container button{
-        font-size: 0.9rem;
-        padding: 0 10px;
-        min-width: 70px;
-    }
-    .search-container input{
-        font-size: 0.9rem;
-    }
-}
-
 .homepage-container{
     display: block;
     margin: auto;
     position:relative;
-    top: 300px;
+    top: 250px;
     width: 148px;
     height: 90px;
     text-align: center;
@@ -160,4 +139,30 @@ body{
     letter-spacing: 0%;
     text-align: center;
     margin-top: 15px;
+}
+
+
+
+
+
+
+@media (max-width: 480px) {
+    .header-container h1{
+        left: 20px;
+    }
+    .header-container p{
+        top: 30px;
+    }
+    .search-container{
+        width: 95%;
+        height: 38px;
+    }
+    .search-container button{
+        font-size: 0.9rem;
+        padding: 0 10px;
+        min-width: 70px;
+    }
+    .search-container input{
+        font-size: 0.9rem;
+    }
 }
