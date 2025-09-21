@@ -11,7 +11,9 @@ async function getMoives(searchValue) {
     const searchRes = await fetch(`http://www.omdbapi.com/?apikey=89e5c911&s=${searchValue}`)
     const searchData = await searchRes.json()
     if(searchData.Response === "False") {
-        console.log('Unable to find what you’re looking for. Please try another search.')
+        document.getElementById('hideHome').style.display = "none"
+        document.getElementById('unavailable').innerHTML = 
+        `<p>Unable to find what you’re looking for. Please try another search.</p>`
         return []
     }
     const movies = await Promise.all(
