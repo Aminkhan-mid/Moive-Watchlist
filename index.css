@@ -142,13 +142,20 @@ body{
 }
 
 .moive-container{
-    border: 1px dotted;
+    margin-top: 50px;
+    padding: 10px;
+    display: flex;
 }
 .moive-container img{
     width: 99px;
     height: 147.41px;
     border-radius: 2.33px;
 }
+.moive-container .divFlex{
+    display: flex;
+    gap: 30px;
+}
+
 .moive-container h3{
     font-weight: 500;
     font-style: Medium;
@@ -157,6 +164,52 @@ body{
     line-height: 20px;
     letter-spacing: 0%;
     text-align: justify;
+}
+.moive-container .ratings{
+    font-family: Inter;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 12px;
+    leading-trim: NONE;
+    line-height: 20px;
+    letter-spacing: 0%;
+}
+.moive-container .total-mins{
+    font-family: Inter;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 12px;
+    leading-trim: NONE;
+    line-height: 20px;
+    letter-spacing: 0%;
+}
+.moive-container .genres{
+    font-family: Inter;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 12px;
+    leading-trim: NONE;
+    line-height: 20px;
+    letter-spacing: 0%;
+}
+.moive-container button{
+    font-family: Inter;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 12px;
+    leading-trim: NONE;
+    line-height: 20px;
+    letter-spacing: 0%;
+    cursor: pointer;
+}
+.moive-container .moive-desc{
+    font-family: Inter;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 14px;
+    leading-trim: NONE;
+    line-height: 20px;
+    letter-spacing: 0%;
 }
 
 
