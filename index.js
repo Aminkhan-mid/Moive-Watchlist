@@ -5,7 +5,6 @@ const moivesContainer = document.getElementById('moives-container')
 
 searchBtn.addEventListener('click', function(){
     getMoives(searchInp.value)
-    document.getElementById('hideHome').style.display = 'none'
 })
 
 async function getMoives(searchValue) {
@@ -51,6 +50,7 @@ async function getMoives(searchValue) {
         </div>  
     </div>
     <hr>`
+      document.getElementById('hideHome').style.display = 'none'
         })
     )
     return movies
