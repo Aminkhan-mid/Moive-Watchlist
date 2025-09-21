@@ -4,7 +4,8 @@ const moivesContainer = document.getElementById('moives-container')
 
 
 searchBtn.addEventListener('click', function(){
-    getMoives(searchInp.value).then(console.log)
+    getMoives(searchInp.value)
+    document.getElementById('hideHome').style.display = 'none'
 })
 
 async function getMoives(searchValue) {

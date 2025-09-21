@@ -54,8 +54,6 @@ body{
      font-size: clamp(0.9rem, 2vw, 1.2rem);
 }
 
-
-
 .search-container{
     width: 90%;
     max-width: 500px;
