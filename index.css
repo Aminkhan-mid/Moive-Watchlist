@@ -238,3 +238,46 @@ body{
         font-size: 0.9rem;
     }
 }
+
+
+@media (max-width: 480px) {
+    .moive-container {
+        margin: 20px 10px; /* reduce margins to fit screen */
+        gap: 12px; /* optional spacing between poster and text */
+    }
+
+    .moive-container img {
+        width: 70px;  /* scale down the poster proportionally */
+        height: auto; /* keep aspect ratio */
+    }
+
+    .moive-container .divFlex {
+        width: auto; /* let flex container shrink naturally */
+    }
+
+    .moive-container h3 {
+        font-size: 1rem; /* scale down text */
+        margin-left: 10px; /* reduce left margin */
+        margin-top: 50px;
+    }
+    .moive-container .ratings{
+        margin-top: 50px;
+    }
+
+    .moive-container .total-mins,
+    .moive-container .genres,
+    .moive-container button {
+        font-size: 0.69rem; /* smaller text */
+        margin: 4px 0; /* tighter spacing */
+    }
+
+    .moive-container .moive-decs {
+        width: auto; /* allow description to shrink */
+        font-size: 0.8rem;
+        line-height: 1.2;
+        margin-top: 1px;
+        margin-left: 10px;
+        margin-bottom: 20px;
+    }
+}
+
