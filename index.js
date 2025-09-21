@@ -8,7 +8,7 @@ searchBtn.addEventListener('click', function(){
 })
 
 async function getMoives(searchValue) {
-    const searchRes = await fetch(`http://www.omdbapi.com/?apikey=89e5c911&s=${searchValue}`)
+    const searchRes = await fetch(`https://www.omdbapi.com/?apikey=89e5c911&s=${searchValue}`)
     const searchData = await searchRes.json()
     if(searchData.Response === "False") {
         document.getElementById('hideHome').style.display = "none"
@@ -18,7 +18,7 @@ async function getMoives(searchValue) {
     }
     const movies = await Promise.all(
         searchData.Search.map(async (movie)=>{
-            const detailsRes = await fetch(`http://www.omdbapi.com/?apikey=89e5c911&i=${movie.imdbID}&plot=short`)
+            const detailsRes = await fetch(`https://www.omdbapi.com/?apikey=89e5c911&i=${movie.imdbID}&plot=short`)
             const detailsData = await detailsRes.json()
              const movieDetails = {
                 title: detailsData.Title,
