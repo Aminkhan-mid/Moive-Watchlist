@@ -1,6 +1,6 @@
 const searchInp = document.getElementById('search-input')
 const searchBtn = document.getElementById('search-button')
-const moivesContainer = document.getElementById('moives-container')
+const displayMovies = document.getElementById('display-movies')
 
 
 searchBtn.addEventListener('click', function(){
@@ -9,18 +9,20 @@ searchBtn.addEventListener('click', function(){
 
 addEventListener("keyup", function(e){
     e.preventDefault()
-    if(e.keyCode === 13){
+    if(e.key === "Enter"){
         getMoives(searchInp.value)
     }
 })
 
 async function getMoives(searchValue) {
+    displayMovies.innerHTML = ""
+
    const searchResponse = await fetch(`https://www.omdbapi.com/?apikey=89e5c911&s=${searchValue}`)
    const searchData = await searchResponse.json()
 
    if(searchData.Response === "False"){
         document.getElementById('hideHome').style.display = "none"
-        document.getElementById('unavailable').innerHTML = 
+    displayMovies.innerHTML = 
         `<p>Unable to find what you’re looking for. Please try another search.</p>`
         return []
    }
@@ -38,33 +40,37 @@ async function getMoives(searchValue) {
                 desc: detailsData.Plot,
                 ratings: detailsData.imdbRating
             } 
-            document.getElementById('display-movies').innerHTML += `
-      <div class="moive-container">
-       <img src="${movieDetails.poster}" alt="movie photo">
-       <div class="moiveChild-container">
-           <div class="divFlex">
-               <h3>${movieDetails.title}</h3>
-               <p class="ratings">
-                   <i class="fa-solid fa-star"></i> 
-                   ${movieDetails.ratings}
-               </p>
-           </div>
-           <div class="divFlex">
-               <p class="total-mins">${movieDetails.runtime}</p>
-               <p class="genres">${movieDetails.genres}</p>
-               <button>
-                   <i class="fa-solid fa-circle-plus"></i>
-                   Watchlist
-               </button>
-           </div>
-           <p class="moive-decs">${movieDetails.desc}</p>
-       </div>  
-   </div>
-   <hr>`
-    document.getElementById('hideHome').style.display = 'none'
+            return movieDetails
         })
     )
-    return movies
+    const render = movies.map(function(m){
+        return `
+        <div class="moive-container">
+        <img src="${m.poster}" alt="${m.title}">
+        <div class="moiveChild-container">
+        <div class="divFlex">
+        <h3>${m.title}</h3>
+        <p class="ratings">
+        <i class="fa-solid fa-star"></i> 
+        ${m.ratings}
+        </p>
+        </div>
+        <div class="divFlex">
+        <p class="total-mins">${m.runtime}</p>
+        <p class="genres">${m.genres}</p>
+        <button>
+        <i class="fa-solid fa-circle-plus"></i>
+        Watchlist
+        </button>
+        </div>
+        <p class="moive-decs">${m.desc}</p>
+        </div>  
+        </div>
+        <hr>`
+    }).join("")
+    document.getElementById('hideHome').style.display = "none"
+
+    displayMovies.innerHTML = render
 }
         
 // api key 89e5c911
