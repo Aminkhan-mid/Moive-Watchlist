@@ -136,16 +136,18 @@ body{
     text-align: center;
     margin-top: 15px;
 }
-.unavailable{
-    color: #2E2E2F;
-    width: fit-content;
+.unavailable p{
+    color: #787878;
+    width: 349px;
+    height: 40px;
     font-weight: 700;
     font-style: Bold;
-    font-size: 1.5rem;
+    font-size: 18px;
     line-height: 1.2;
-    display: block;
-    margin: 400px auto;
+    letter-spacing: 0%;
     text-align: center;
+    display: block;
+    margin: 207px auto;
 }
 
 .moive-container{
@@ -290,3 +292,45 @@ body{
     }
 }
 
+/* Watchlist.hmtl CSS */
+
+.watchlist-empty {
+    display: flex;
+    flex-direction: column;
+}
+.watchlist-empty p{
+    color: #787878;
+    width: 349px;
+    height: 40px;
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 18px;
+    line-height: 1.2;
+    letter-spacing: 0%;
+    text-align: center;
+    display: block;
+    margin: auto;
+    margin-top: 207px;
+}
+.watchlist-empty i{
+    color: #FFFFFF;
+    width: 1.125rem;
+    height: 1.125rem;
+    margin-top: 16px;
+    margin-right: 2px;
+}
+.watchlist-empty button{
+    background-color: transparent;
+    margin-top: 0;
+    cursor: pointer;
+    width: fit-content;
+    margin: auto;
+    border: none;
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 0.9rem;
+    line-height: 1.2;
+    letter-spacing: 0%;
+    text-align: center;
+
+}
