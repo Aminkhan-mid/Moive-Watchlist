@@ -5,12 +5,14 @@ const displayMovies = document.getElementById('display-movies')
 
 searchBtn.addEventListener('click', function(){
     getMoives(searchInp.value)
+    searchInp.value = ""
 })
 
 addEventListener("keyup", function(e){
     e.preventDefault()
     if(e.key === "Enter"){
         getMoives(searchInp.value)
+        searchInp.value = ""
     }
 })
 
@@ -69,7 +71,6 @@ async function getMoives(searchValue) {
         <hr>`
     }).join("")
     document.getElementById('hideHome').style.display = "none"
-
     displayMovies.innerHTML = render
 }
         
