@@ -23,7 +23,6 @@ document.addEventListener("click", function(e){
             watchlistArr.splice(index, 1)
         }
         localStorage.setItem("watchlistArr", JSON.stringify(watchlistArr))
-        watchlistArr = []
         renderWatchlist()
     }
 })
@@ -43,6 +42,7 @@ async function renderWatchlist(){
     let watchlistArr = JSON.parse(localStorage.getItem("watchlistArr")) || []
 
     if(watchlistArr.length === 0){
+        watchlistMoives.innerHTML = ""
         renderEmptyWatchList()
         return
     }
@@ -91,6 +91,7 @@ async function renderWatchlist(){
 }
 
 function renderEmptyWatchList(){
+    let watchlistArr = JSON.parse(localStorage.getItem("watchlistArr")) || []
     if(watchlistArr.length === 0){
         emptyWatchlist.innerHTML = 
         `
