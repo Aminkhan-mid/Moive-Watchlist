@@ -23,8 +23,8 @@ document.addEventListener("click", function(e){
             watchlistArr.splice(index, 1)
         }
         localStorage.setItem("watchlistArr", JSON.stringify(watchlistArr))
-        renderWatchlist()
         watchlistArr = []
+        renderWatchlist()
     }
 })
 document.addEventListener("DOMContentLoaded", function() {
